@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 
 const MetaTags = () => {
-  console.log("url ->", process.env.PUBLIC_URL);
+  console.log("url ->", process.env);
 
   return (<Helmet>
     <meta property="og:url" content={`${process.env.PUBLIC_URL}/surya.jpeg`} />
