@@ -1,0 +1,86 @@
+import { motion } from "framer-motion";
+import { useRef } from "react";
+import CTA from "../Components/CTA";
+import Works, { getBackground } from "../Components/Works";
+import { MyStackList } from "../appData";
+
+const Home = () => {
+  const scrollRef = useRef<null | HTMLDivElement>(null);
+
+  const triggerScroll = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  return (
+    <div className="bg-dark1">
+      <div
+        className="flex justify-center items-center mx-auto px-10 py-14 max-w-7xl"
+        style={{ height: "100vh" }}
+      >
+        <div className="flex flex-col justify-center items-center gap-4">
+          <motion.img
+            animate={{ opacity: [0, 0.2, 0.3, 0.5, 1] }}
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.2 }}
+            className="h-60 w-60 rounded-full bg-white"
+            src={require("../Assets/surya.jpeg")}
+          />
+          <div className="h-2" />
+          <motion.div
+            animate={{ opacity: [0, 1], translateX: [200, 0] }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="py-2 text-start text-8xl md:text-3xl sm:text-2xl font-extrabold text-white">
+              Hey, I am
+              <span>&nbsp;</span>
+              <span className="text-start text-8xl md:text-3xl sm:text-2xl font-extrabold purplePinkGradient">
+                Surya
+              </span>
+            </div>
+          </motion.div>
+          <motion.div
+            animate={{ opacity: [0, 1], translateX: [-200, 0] }}
+            transition={{ duration: 0.2 }}
+            className="py-2 text-start text-xl text-white font-normal mb-4"
+          >
+            Full Stack Developer
+          </motion.div>
+          <motion.div
+            animate={{ opacity: [0, 0.2, 0.3, 0.5, 1] }}
+            transition={{ duration: 0.2, delay: 0.1 }}
+            className="flex flex-row gap-4 flex-wrap justify-center items-center"
+          >
+            {MyStackList.map((item, index) => (
+              <div
+                className="rounded-full px-2 py-1 justify-center items-center flex text-white font-semibold hover:scale-125  transition-all ease-in-out cursor-default"
+                style={{
+                  background: getBackground(item.length),
+                }}
+              >
+                {item}
+              </div>
+            ))}
+          </motion.div>
+
+          <div className="md:h-3 sm:h-2 h-5" />
+          <motion.div
+            animate={{ opacity: [0, 1], translateX: [100, 0] }}
+            transition={{ duration: 0.1, delay: 0.2 }}
+          >
+            <CTA
+              text="View my works 👇"
+              onPress={() => {
+                triggerScroll();
+              }}
+            />
+          </motion.div>
+        </div>
+      </div>
+      <Works scrollRef={scrollRef} />
+    </div>
+  );
+};
+
+export default Home;
