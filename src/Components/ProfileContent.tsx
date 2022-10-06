@@ -65,7 +65,7 @@ const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
           transition={{ duration: 0.1, delay: 0.2 }}
         >
           <CTA
-            text="View my works 👇"
+            text="View my work 👇"
             onPress={() => {
               triggerScroll();
             }}
