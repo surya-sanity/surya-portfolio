@@ -10,7 +10,7 @@ const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
       className="flex justify-center items-center mx-auto px-10 py-14 max-w-7xl"
     >
       <div className="flex flex-col justify-center items-center gap-4">
-        <div className="h-5" />
+        <div className="h-5 lg:h-5 xl:h-5 sm:h-2" />
 
         <motion.img
           animate={{ opacity: [0, 0.2, 0.3, 0.5, 1] }}
