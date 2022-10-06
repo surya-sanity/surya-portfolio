@@ -4,7 +4,6 @@ import { backgrounds } from "../Styles/Styles";
 import { workData } from "../appData";
 import TechStack from "./TechStack";
 import { Icons } from "../Assets/icons";
-import CTA from "./CTA";
 
 interface WorksProps {
   scrollRef: React.RefObject<HTMLDivElement>;
@@ -65,7 +64,7 @@ function Works(props: WorksProps) {
                   <div className="h-8" />
 
                   {/* buttons */}
-                  <div className="flex flex-row flex-wrap justify-between items-center">
+                  <div className="flex flex-row flex-wrap justify-between items-center gap-5">
                     <div className="flex gap-3">
                       {
                         item?.links?.clientSource && <a href={item.links.clientSource} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
