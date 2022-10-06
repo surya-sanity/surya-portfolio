@@ -8,9 +8,10 @@ const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
   return (
     <div
       className="flex justify-center items-center mx-auto px-10 py-14 max-w-7xl"
-      style={{ height: "100vh" }}
     >
       <div className="flex flex-col justify-center items-center gap-4">
+        <div className="h-5" />
+
         <motion.img
           animate={{ opacity: [0, 0.2, 0.3, 0.5, 1] }}
           whileHover={{ scale: 1.1 }}
