@@ -66,7 +66,7 @@ const workData: WorkData[] = [
   },
   {
     title: "Chat Application (Flash)",
-    description: "A Fullstack Chat application using the Flutter and Firebase Realtime Database, Users can Register, SignIn, View other users, can Chat with others, see whos online and offline.",
+    description: "A Fullstack Chat application using the Flutter and Firebase Firestore Database, Users can Register, SignIn, View other users, can Chat with others and see who's online and offline.",
     techStack: [Stack.Flutter, Stack.Dart, Stack.Firebase],
     image: "https://i.imgur.com/qQqQqQq.png",
     links: {
