@@ -69,7 +69,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart, Stack.Firebase],
     image: "https://i.imgur.com/qQqQqQq.png",
     links: {
-      visitSite: "",
+      source: "https://github.com/surya-sanity/flash",
     },
   },
   {
@@ -79,7 +79,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     image: "https://i.imgur.com/qQqQqQq.png",
     links: {
-      visitSite: "",
+      source: "https://github.com/surya-sanity/weatherx",
     },
   },
   {
@@ -97,7 +97,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     image: "https://i.imgur.com/qQqQqQq.png",
     links: {
-      visitSite: "",
+      source: "https://github.com/surya-sanity/instagram",
     },
   },
   {
@@ -124,7 +124,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     image: "https://i.imgur.com/qQqQqQq.png",
     links: {
-      visitSite: "",
+      source: "https://github.com/surya-sanity/datetime",
     },
   },
 ];
