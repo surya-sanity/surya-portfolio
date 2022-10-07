@@ -72,60 +72,57 @@ function Works(props: WorksProps) {
 
 
               {/* buttons */}
-              <div className="flex flex-row flex-wrap justify-between items-center gap-5 ">
-                <div className="flex gap-3">
-                  {
-                    item?.links?.clientSource && <a href={item.links.clientSource} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
-                      <Icons.github height={20} width={20} className="mr-3" />
-                      <span className="text-ellipsis truncate">Client code</span>
-                    </a >
-                  }
-                  {
-                    item?.links?.serverSource && <a href={item.links.serverSource} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
-                      <Icons.github height={20} width={20} className="mr-3" />
-                      <span className="text-ellipsis truncate">Server code</span>
-                    </a >
-                  }
-                  {
-                    item?.links?.source && <a href={item.links.source} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
-                      <Icons.github height={20} width={20} className="mr-3" />
-                      <span>Source</span>
-                    </a >
-                  }
-                  {
-                    item?.links?.visitSite &&
-                    <motion.a
-                      href={item.links.visitSite} target="_blank" rel="noopener noreferrer"
-                      className="flex flex-row items-center px-2.5 py-1 rounded-lg bg-blue cursor-pointer text-white font-semibold"
-                      whileHover={{
-                        scale: 1.05,
-                        transition: { duration: 0.2 },
-                      }}
-                      whileTap={{
-                        scale: 0.9,
-                      }}
-                    >
-                      Visit
-                    </motion.a>
-                  }
-                  {
-                    item?.links?.apkLink &&
-                    <motion.a
-                      href={item.links.apkLink} target="_blank" rel="noopener noreferrer"
-                      className="flex flex-row items-center px-2.5 py-1 rounded-lg bg-blue cursor-pointer text-white font-semibold"
-                      whileHover={{
-                        scale: 1.05,
-                        transition: { duration: 0.2 },
-                      }}
-                      whileTap={{
-                        scale: 0.9,
-                      }}
-                    >
-                      APK
-                    </motion.a>
-                  }
-                </div>
-
+              <div className="flex flex-row flex-wrap items-center gap-5 ">
+                {
+                  item?.links?.clientSource && <a href={item.links.clientSource} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
+                    <Icons.github height={20} width={20} className="mr-3" />
+                    <span className="text-ellipsis truncate">Client code</span>
+                  </a >
+                }
+                {
+                  item?.links?.serverSource && <a href={item.links.serverSource} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
+                    <Icons.github height={20} width={20} className="mr-3" />
+                    <span className="text-ellipsis truncate">Server code</span>
+                  </a >
+                }
+                {
+                  item?.links?.source && <a href={item.links.source} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
+                    <Icons.github height={20} width={20} className="mr-3" />
+                    <span>Source</span>
+                  </a >
+                }
+                {
+                  item?.links?.visitSite &&
+                  <motion.a
+                    href={item.links.visitSite} target="_blank" rel="noopener noreferrer"
+                    className="flex flex-row items-center px-2.5 py-1 rounded-lg bg-blue cursor-pointer text-white font-semibold"
+                    whileHover={{
+                      scale: 1.05,
+                      transition: { duration: 0.2 },
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                  >
+                    Visit
+                  </motion.a>
+                }
+                {
+                  item?.links?.apkLink &&
+                  <motion.a
+                    href={item.links.apkLink} target="_blank" rel="noopener noreferrer"
+                    className="flex flex-row items-center px-2.5 py-1 rounded-lg bg-blue cursor-pointer text-white font-semibold"
+                    whileHover={{
+                      scale: 1.05,
+                      transition: { duration: 0.2 },
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                  >
+                    APK
+                  </motion.a>
+                }
               </div>
             </motion.div>
 
