@@ -22,7 +22,7 @@ function CTA(props: CTAProps) {
         scale: 0.9,
       }}
     >
-      <div className="text-white font-semibold ">{text}</div>
+      <div className="text-white font-semibold text-ellipsis truncate">{text}</div>
     </motion.button>
   );
 }

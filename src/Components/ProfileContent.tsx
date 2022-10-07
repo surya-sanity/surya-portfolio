@@ -50,6 +50,7 @@ const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
         >
           {MyStackList.map((item, index) => (
             <div
+              key={index.toString()}
               className="rounded-full px-2 py-1 justify-center items-center flex text-white font-semibold hover:scale-125  transition-all ease-in-out cursor-default"
               style={{
                 background: getBackground(item.length),
