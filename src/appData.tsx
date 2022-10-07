@@ -48,6 +48,7 @@ export interface WorkData {
     serverSource?: string;
     source?: string;
     visitSite?: string;
+    apkLink?:string;
   };
 }
 
@@ -64,12 +65,13 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Chat Application",
+    title: "Chat Application (Flash)",
     description: "A Fullstack Chat application using the Flutter and Firebase Realtime Database, Users can Register, SignIn, View other users, can Chat with others, see whos online and offline.",
     techStack: [Stack.Flutter, Stack.Dart, Stack.Firebase],
     image: "https://i.imgur.com/qQqQqQq.png",
     links: {
       source: "https://github.com/surya-sanity/flash",
+      apkLink:"https://drive.google.com/file/d/1OQtVBL3K1qcijoMXhIWktOb_jHOP2i6j/view?usp=sharing"
     },
   },
   {
@@ -80,6 +82,7 @@ const workData: WorkData[] = [
     image: "https://i.imgur.com/qQqQqQq.png",
     links: {
       source: "https://github.com/surya-sanity/weatherx",
+      apkLink:"https://drive.google.com/file/d/1AgN9Lw3CJ2XirKLKtnBYMnR2UcoWvEHi/view?usp=sharing"
     },
   },
   {

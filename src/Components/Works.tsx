@@ -101,6 +101,22 @@ function Works(props: WorksProps) {
                         Visit
                       </motion.a>
                     }
+                    {
+                      item?.links?.apkLink &&
+                      <motion.a
+                        href={item.links.apkLink} target="_blank" rel="noopener noreferrer"
+                        className="flex flex-row items-center px-2.5 py-1 rounded-lg bg-blue cursor-pointer text-white font-semibold"
+                        whileHover={{
+                          scale: 1.05,
+                          transition: { duration: 0.2 },
+                        }}
+                        whileTap={{
+                          scale: 0.9,
+                        }}
+                      >
+                        APK
+                      </motion.a>
+                    }
                   </div>
                 </div>
               </div>
