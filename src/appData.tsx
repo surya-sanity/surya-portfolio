@@ -54,7 +54,18 @@ export interface WorkData {
 
 const workData: WorkData[] = [
   {
-    title: "Full Stack Ebook Web Application",
+    title: "Full Stack Chat App (Flash Chat)",
+    description: "Chat Application using React, NodeJs, Express, Sequelize, MySQL and Socket IO. Users can SignUp, Login, choose their display avatar, edit their profile, see other users and their Online status in realtime, text chat with them and also implemented message status (sending, send and seen). Made fully realtime using Socket IO. The site is fully responsive too.",
+    techStack: [Stack.React, Stack.Sequelize, Stack.NodeJS, Stack.Redux, Stack.Tailwind, Stack.TypeScript, Stack.SocketIO],
+    links: {
+      clientSource: "https://github.com/surya-sanity/chat-client",
+      serverSource: "https://github.com/surya-sanity/chat-server",
+      visitSite: "https://surya-flash.vercel.app/",
+      imageLink: "flashchatmock.png"
+    },
+  },
+  {
+    title: "Full Stack Ebook Web App",
     description: "Ebook Application using React, NodeJs, Express, Sequelize, MySQL. Admin can login, add, delete & edit books, and monitor the books rented by the users, Users can Register, Login, View, Rent books, Read Books, Manage his wallet balance. Focussed mainly on the server part of the application, Front End needs to be improved.",
     techStack: [Stack.React, Stack.Sequelize, Stack.NodeJS, Stack.Redux, Stack.Tailwind, Stack.TypeScript],
     links: {
@@ -65,7 +76,7 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Chat Application (Flash)",
+    title: "Chat App (Flash)",
     description: "A Fullstack Chat application using the Flutter and Firebase Firestore Database, Users can Register, SignIn, View other users, can Chat with others and see who's online and offline.",
     techStack: [Stack.Flutter, Stack.Dart, Stack.Firebase],
     links: {
@@ -75,7 +86,7 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Weather Application (WeatherX)",
+    title: "Weather App (WeatherX)",
     description:
       "A Simple weather application built with Flutter and Open Weather API.",
     techStack: [Stack.Flutter, Stack.Dart],
@@ -122,7 +133,7 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Clock Application (TimeX)",
+    title: "Clock App (TimeX)",
     description: "A Simple Clock application built with Flutter.",
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
