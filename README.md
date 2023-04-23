@@ -1,1 +1,1 @@
-# Simple portfolio using React.
+# Portfolio site using React.
