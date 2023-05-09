@@ -54,6 +54,16 @@ export interface WorkData {
 
 const workData: WorkData[] = [
   {
+    title: "SpaceX UI ",
+    description: "SpaceX UI developed using React, Redux, Redux Toolkit and Tailwind CSS, for data SpaceX API is used.",
+    techStack: [Stack.React, Stack.Redux, Stack.Tailwind, Stack.TypeScript],
+    links: {
+      clientSource: "https://github.com/surya-sanity/spacex",
+      visitSite: "https://spacex-surya.vercel.app/",
+      imageLink: "spacexmock.png"
+    },
+  },
+  {
     title: "Full Stack Chat App (Flash Chat)",
     description: "Chat Application using React, NodeJs, Express, Sequelize, MySQL and Socket IO. Users can SignUp, Login, choose their display avatar, edit their profile, see other users and their Online status in realtime, text chat with them and also implemented message status (sending, send and seen). Made fully realtime using Socket IO. The site is fully responsive too.",
     techStack: [Stack.React, Stack.Sequelize, Stack.NodeJS, Stack.Redux, Stack.Tailwind, Stack.TypeScript, Stack.SocketIO],
