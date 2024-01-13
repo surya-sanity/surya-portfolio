@@ -40,7 +40,7 @@ const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
           transition={{ duration: 0.2 }}
           className="py-2 text-start text-xl text-white font-normal mb-4"
         >
-          Full Stack Developer
+          Front-end Developer
         </motion.div>
 
         <motion.div
