@@ -74,17 +74,17 @@ const workData: WorkData[] = [
       imageLink: "flashchatmock.png"
     },
   },
-  {
-    title: "Full Stack Ebook Web App",
-    description: "Ebook Application using React, NodeJs, Express, Sequelize, MySQL. Admin can login, add, delete & edit books, and monitor the books rented by the users, Users can Register, Login, View, Rent books, Read Books, Manage his wallet balance. Focussed mainly on the server part of the application, Front End needs to be improved.",
-    techStack: [Stack.React, Stack.Sequelize, Stack.NodeJS, Stack.Redux, Stack.Tailwind, Stack.TypeScript],
-    links: {
-      clientSource: "https://github.com/surya-sanity/ebook-react",
-      serverSource: "https://github.com/surya-sanity/server",
-      visitSite: "https://ebook-react.vercel.app/",
-      imageLink: "ebookmock.png"
-    },
-  },
+  // {
+  //   title: "Full Stack Ebook Web App",
+  //   description: "Ebook Application using React, NodeJs, Express, Sequelize, MySQL. Admin can login, add, delete & edit books, and monitor the books rented by the users, Users can Register, Login, View, Rent books, Read Books, Manage his wallet balance. Focussed mainly on the server part of the application, Front End needs to be improved.",
+  //   techStack: [Stack.React, Stack.Sequelize, Stack.NodeJS, Stack.Redux, Stack.Tailwind, Stack.TypeScript],
+  //   links: {
+  //     clientSource: "https://github.com/surya-sanity/ebook-react",
+  //     serverSource: "https://github.com/surya-sanity/server",
+  //     visitSite: "https://ebook-react.vercel.app/",
+  //     imageLink: "ebookmock.png"
+  //   },
+  // },
   {
     title: "Chat App (Flash)",
     description: "A Fullstack Chat application using the Flutter and Firebase Firestore Database, Users can Register, SignIn, View other users, can Chat with others and see who's online and offline.",
