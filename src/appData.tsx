@@ -35,7 +35,7 @@ export enum Stack {
   Flutter = "Flutter",
   ReactNative = "React Native",
   Firebase = "Firebase",
-
+  NextJS = "NextJS",
 }
 
 export interface WorkData {
@@ -53,6 +53,16 @@ export interface WorkData {
 }
 
 const workData: WorkData[] = [
+  {
+    title: "Foliohive ",
+    description: "A simple portfolio hub where users can explore top curated portfolio sites and submit their own portfolios. Discover and be inspired by the best portfolio designs from various fields such as design, development, and photography. Users can also submit their own portfolios to be featured, gaining visibility and recognition for their work.",
+    techStack: [Stack.NextJS, Stack.TypeScript],
+    links: {
+      clientSource: "https://github.com/surya-sanity/craftex",
+      visitSite: "https://foliohive.vercel.app/",
+      imageLink: "folio-hive.png"
+    },
+  },
   {
     title: "SpaceX UI ",
     description: "SpaceX UI developed using React, Redux, Redux Toolkit and Tailwind CSS, for data SpaceX API is used.",
