@@ -17,6 +17,7 @@ export const MyStackList = [
   "Socket IO",
   "Redis",
   "Web Sockets",
+  "NextJS",
 ];
 
 export enum Stack {
@@ -55,33 +56,44 @@ export interface WorkData {
 const workData: WorkData[] = [
   {
     title: "Foliohive ",
-    description: "A simple portfolio hub where users can explore top curated portfolio sites and submit their own portfolios. Discover and be inspired by the best portfolio designs from various fields such as design, development, and photography. Users can also submit their own portfolios to be featured, gaining visibility and recognition for their work.",
+    description:
+      "A simple portfolio hub where users can explore top curated portfolio sites and submit their own portfolios. Discover and be inspired by the best portfolio designs from various fields such as design, development, and photography. Users can also submit their own portfolios to be featured, gaining visibility and recognition for their work.",
     techStack: [Stack.NextJS, Stack.TypeScript],
     links: {
       clientSource: "https://github.com/surya-sanity/craftex",
       visitSite: "https://foliohive.vercel.app/",
-      imageLink: "folio-hive.png"
+      imageLink: "folio-hive.png",
     },
   },
   {
     title: "SpaceX UI ",
-    description: "SpaceX UI developed using React, Redux, Redux Toolkit and Tailwind CSS, for data SpaceX API is used.",
+    description:
+      "SpaceX UI developed using React, Redux, Redux Toolkit and Tailwind CSS, for data SpaceX API is used.",
     techStack: [Stack.React, Stack.Redux, Stack.Tailwind, Stack.TypeScript],
     links: {
       clientSource: "https://github.com/surya-sanity/spacex",
       visitSite: "https://spacex-surya.vercel.app/",
-      imageLink: "spacexmock.png"
+      imageLink: "spacexmock.png",
     },
   },
   {
     title: "Full Stack Chat App (Flash Chat)",
-    description: "Chat Application using React, NodeJs, Express, Sequelize, MySQL and Socket IO. Users can SignUp, Login, choose their display avatar, edit their profile, see other users and their Online status in realtime, text chat with them and also implemented message status (sending, send and seen). Made fully realtime using Socket IO. The site is fully responsive too.",
-    techStack: [Stack.React, Stack.Sequelize, Stack.NodeJS, Stack.Redux, Stack.Tailwind, Stack.TypeScript, Stack.SocketIO],
+    description:
+      "Chat Application using React, NodeJs, Express, Sequelize, MySQL and Socket IO. Users can SignUp, Login, choose their display avatar, edit their profile, see other users and their Online status in realtime, text chat with them and also implemented message status (sending, send and seen). Made fully realtime using Socket IO. The site is fully responsive too.",
+    techStack: [
+      Stack.React,
+      Stack.Sequelize,
+      Stack.NodeJS,
+      Stack.Redux,
+      Stack.Tailwind,
+      Stack.TypeScript,
+      Stack.SocketIO,
+    ],
     links: {
       clientSource: "https://github.com/surya-sanity/chat-client",
       serverSource: "https://github.com/surya-sanity/chat-server",
       visitSite: "https://surya-flash.vercel.app/",
-      imageLink: "flashchatmock.png"
+      imageLink: "flashchatmock.png",
     },
   },
   // {
@@ -97,12 +109,14 @@ const workData: WorkData[] = [
   // },
   {
     title: "Chat App (Flash)",
-    description: "A Fullstack Chat application using the Flutter and Firebase Firestore Database, Users can Register, SignIn, View other users, can Chat with others and see who's online and offline.",
+    description:
+      "A Fullstack Chat application using the Flutter and Firebase Firestore Database, Users can Register, SignIn, View other users, can Chat with others and see who's online and offline.",
     techStack: [Stack.Flutter, Stack.Dart, Stack.Firebase],
     links: {
       source: "https://github.com/surya-sanity/flash",
-      apkLink: "https://drive.google.com/file/d/1OQtVBL3K1qcijoMXhIWktOb_jHOP2i6j/view?usp=sharing",
-      imageLink: "flashmock.png"
+      apkLink:
+        "https://drive.google.com/file/d/1OQtVBL3K1qcijoMXhIWktOb_jHOP2i6j/view?usp=sharing",
+      imageLink: "flashmock.png",
     },
   },
   {
@@ -112,8 +126,9 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/weatherx",
-      apkLink: "https://drive.google.com/file/d/1AgN9Lw3CJ2XirKLKtnBYMnR2UcoWvEHi/view?usp=sharing",
-      imageLink: "weatherxmock.png"
+      apkLink:
+        "https://drive.google.com/file/d/1AgN9Lw3CJ2XirKLKtnBYMnR2UcoWvEHi/view?usp=sharing",
+      imageLink: "weatherxmock.png",
     },
   },
   {
@@ -122,7 +137,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/gpay_ui_clone",
-      imageLink: "gpaymock.png"
+      imageLink: "gpaymock.png",
     },
   },
   {
@@ -131,7 +146,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/instagram",
-      imageLink: "instagrammock.png"
+      imageLink: "instagrammock.png",
     },
   },
   {
@@ -140,7 +155,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/clubhouse_ui_clone",
-      imageLink: "clubhousemock.png"
+      imageLink: "clubhousemock.png",
     },
   },
   {
@@ -149,7 +164,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/authui",
-      imageLink: "authmock.png"
+      imageLink: "authmock.png",
     },
   },
   {
@@ -158,8 +173,9 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/datetime",
-      apkLink: "https://drive.google.com/file/d/103VfD0gqEjnwYfhpVLCJQl9zNgzXgiBD/view?usp=sharing",
-      imageLink: "timexmock.png"
+      apkLink:
+        "https://drive.google.com/file/d/103VfD0gqEjnwYfhpVLCJQl9zNgzXgiBD/view?usp=sharing",
+      imageLink: "timexmock.png",
     },
   },
 ];
