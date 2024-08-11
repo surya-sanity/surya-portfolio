@@ -92,7 +92,6 @@ const workData: WorkData[] = [
     links: {
       clientSource: "https://github.com/surya-sanity/chat-client",
       serverSource: "https://github.com/surya-sanity/chat-server",
-      visitSite: "https://surya-flash.vercel.app/",
       imageLink: "flashchatmock.png",
     },
   },
