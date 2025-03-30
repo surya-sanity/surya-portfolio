@@ -66,9 +66,9 @@ export interface WorkData {
 
 const workData: WorkData[] = [
   {
-    title: "Foliohive ",
+    title: "FolioHive - Portfolio Discovery Platform",
     description:
-      "A simple portfolio hub where users can explore top curated portfolio sites and submit their own portfolios. Discover and be inspired by the best portfolio designs from various fields such as design, development, and photography. Users can also submit their own portfolios to be featured, gaining visibility and recognition for their work.",
+      "A curated portfolio discovery platform that enables creative professionals to showcase and explore exceptional portfolio websites. The platform facilitates inspiration and networking across various disciplines including design, development, and photography, while offering creators the opportunity to submit their work for featured placement.",
     techStack: [Stack.NextJS, Stack.TypeScript],
     links: {
       clientSource: "https://github.com/surya-sanity/craftex",
@@ -77,9 +77,9 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "SpaceX UI ",
+    title: "SpaceX Dashboard",
     description:
-      "SpaceX UI developed using React, Redux, Redux Toolkit and Tailwind CSS, for data SpaceX API is used.",
+      "An interactive dashboard application built with modern web technologies, providing real-time access to SpaceX mission data through their public API. Features a responsive interface developed with React, Redux Toolkit, and Tailwind CSS.",
     techStack: [Stack.React, Stack.Redux, Stack.Tailwind, Stack.TypeScript],
     links: {
       clientSource: "https://github.com/surya-sanity/spacex",
@@ -88,9 +88,9 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Full Stack Chat App (Flash Chat)",
+    title: "FlashChat - Real-time Messaging Platform",
     description:
-      "Chat Application using React, NodeJs, Express, Sequelize, MySQL and Socket IO. Users can SignUp, Login, choose their display avatar, edit their profile, see other users and their Online status in realtime, text chat with them and also implemented message status (sending, send and seen). Made fully realtime using Socket IO. The site is fully responsive too.",
+      "A comprehensive real-time messaging platform built with a modern tech stack. Features include user authentication, customizable avatars, profile management, real-time presence indicators, and message status tracking. The application leverages Socket.IO for real-time communications and offers a fully responsive design for seamless cross-device usage.",
     techStack: [
       Stack.React,
       Stack.Sequelize,
@@ -118,9 +118,9 @@ const workData: WorkData[] = [
   //   },
   // },
   {
-    title: "Chat App (Flash)",
+    title: "Flash - Mobile Chat Application",
     description:
-      "A Fullstack Chat application using the Flutter and Firebase Firestore Database, Users can Register, SignIn, View other users, can Chat with others and see who's online and offline.",
+      "A mobile-first chat application developed with Flutter and Firebase. The application provides seamless real-time messaging capabilities, user authentication, contact management, and presence awareness. Built with a focus on performance and user experience.",
     techStack: [Stack.Flutter, Stack.Dart, Stack.Firebase],
     links: {
       source: "https://github.com/surya-sanity/flash",
@@ -130,9 +130,9 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Weather App (WeatherX)",
+    title: "WeatherX - Weather Forecast Application",
     description:
-      "A Simple weather application built with Flutter and Open Weather API.",
+      "A sophisticated weather application that provides accurate forecasts using the OpenWeather API. Built with Flutter, the app delivers a clean, intuitive interface for accessing weather information.",
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/weatherx",
@@ -142,8 +142,9 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Gpay UI Clone",
-    description: "A clone of Gpay Home UI built with Flutter.",
+    title: "Google Pay UI Implementation",
+    description:
+      "A precise implementation of Google Pay's user interface using Flutter, demonstrating attention to detail in modern mobile app design and development practices.",
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/gpay_ui_clone",
@@ -151,8 +152,9 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Instagram UI Clone",
-    description: "A clone of Instagram UI built with Flutter.",
+    title: "Instagram Interface Recreation",
+    description:
+      "A detailed recreation of Instagram's mobile interface using Flutter, showcasing complex UI implementation and modern mobile design patterns.",
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/instagram",
@@ -160,8 +162,9 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Clubhouse UI Clone",
-    description: "A clone of Clubhouse UI built with Flutter.",
+    title: "Clubhouse Interface Implementation",
+    description:
+      "A faithful reproduction of Clubhouse's distinctive user interface built with Flutter, demonstrating expertise in implementing modern social media application designs.",
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/clubhouse_ui_clone",
@@ -169,8 +172,9 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Simple Authentication UI",
-    description: "Login, SignUp UI using Flutter.",
+    title: "Authentication UI Framework",
+    description:
+      "A modular authentication interface framework featuring login and registration flows, built with Flutter. Designed for reusability and easy integration into various applications.",
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/authui",
@@ -178,8 +182,9 @@ const workData: WorkData[] = [
     },
   },
   {
-    title: "Clock App (TimeX)",
-    description: "A Simple Clock application built with Flutter.",
+    title: "TimeX - Chronograph Application",
+    description:
+      "A precision-focused chronograph application developed with Flutter, offering essential time management and tracking functionality with a clean, modern interface.",
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/datetime",
