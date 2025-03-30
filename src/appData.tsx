@@ -1,3 +1,14 @@
+import folioHive from "./Assets/mocks/folio-hive.png";
+import spacex from "./Assets/mocks/spacexmock.png";
+import flashchat from "./Assets/mocks/flashchatmock.png";
+import flash from "./Assets/mocks/flashmock.png";
+import weatherx from "./Assets/mocks/weatherxmock.png";
+import gpay from "./Assets/mocks/gpaymock.png";
+import instagram from "./Assets/mocks/instagrammock.png";
+import clubhouse from "./Assets/mocks/clubhousemock.png";
+import auth from "./Assets/mocks/authmock.png";
+import timex from "./Assets/mocks/timexmock.png";
+
 export const MyStackList = [
   "Flutter",
   "React JS",
@@ -62,7 +73,7 @@ const workData: WorkData[] = [
     links: {
       clientSource: "https://github.com/surya-sanity/craftex",
       visitSite: "https://foliohive.vercel.app/",
-      imageLink: "folio-hive.png",
+      imageLink: folioHive,
     },
   },
   {
@@ -73,7 +84,7 @@ const workData: WorkData[] = [
     links: {
       clientSource: "https://github.com/surya-sanity/spacex",
       visitSite: "https://spacex-surya.vercel.app/",
-      imageLink: "spacexmock.png",
+      imageLink: spacex,
     },
   },
   {
@@ -92,7 +103,7 @@ const workData: WorkData[] = [
     links: {
       clientSource: "https://github.com/surya-sanity/chat-client",
       serverSource: "https://github.com/surya-sanity/chat-server",
-      imageLink: "flashchatmock.png",
+      imageLink: flashchat,
     },
   },
   // {
@@ -115,7 +126,7 @@ const workData: WorkData[] = [
       source: "https://github.com/surya-sanity/flash",
       apkLink:
         "https://drive.google.com/file/d/1OQtVBL3K1qcijoMXhIWktOb_jHOP2i6j/view?usp=sharing",
-      imageLink: "flashmock.png",
+      imageLink: flash,
     },
   },
   {
@@ -127,7 +138,7 @@ const workData: WorkData[] = [
       source: "https://github.com/surya-sanity/weatherx",
       apkLink:
         "https://drive.google.com/file/d/1AgN9Lw3CJ2XirKLKtnBYMnR2UcoWvEHi/view?usp=sharing",
-      imageLink: "weatherxmock.png",
+      imageLink: weatherx,
     },
   },
   {
@@ -136,7 +147,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/gpay_ui_clone",
-      imageLink: "gpaymock.png",
+      imageLink: gpay,
     },
   },
   {
@@ -145,7 +156,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/instagram",
-      imageLink: "instagrammock.png",
+      imageLink: instagram,
     },
   },
   {
@@ -154,7 +165,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/clubhouse_ui_clone",
-      imageLink: "clubhousemock.png",
+      imageLink: clubhouse,
     },
   },
   {
@@ -163,7 +174,7 @@ const workData: WorkData[] = [
     techStack: [Stack.Flutter, Stack.Dart],
     links: {
       source: "https://github.com/surya-sanity/authui",
-      imageLink: "authmock.png",
+      imageLink: auth,
     },
   },
   {
@@ -174,7 +185,7 @@ const workData: WorkData[] = [
       source: "https://github.com/surya-sanity/datetime",
       apkLink:
         "https://drive.google.com/file/d/103VfD0gqEjnwYfhpVLCJQl9zNgzXgiBD/view?usp=sharing",
-      imageLink: "timexmock.png",
+      imageLink: timex,
     },
   },
 ];

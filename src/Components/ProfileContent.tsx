@@ -3,6 +3,7 @@ import CTA from "../Components/CTA";
 import { getBackground } from "../Components/Works";
 import { MyStackList } from "../appData";
 import Socials from "./Socials";
+import surya from "../Assets/surya.jpeg";
 
 const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
   return (
@@ -15,7 +16,7 @@ const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.2 }}
           className="h-60 w-60 rounded-full bg-white"
-          src="src/Assets/surya.jpeg"
+          src={surya}
         />
         <div className="h-2" />
         <motion.div

@@ -58,7 +58,7 @@ function Works(props: WorksProps) {
                 {item?.links?.imageLink && (
                   <div className="ml-10 md:my-5 md:ml-0 sm:my-3 sm:ml-0 ">
                     <img
-                      src={`src/Assets/mocks/${item?.links?.imageLink}`}
+                      src={item?.links?.imageLink}
                       height={300}
                       width={300}
                       style={{ objectFit: "fill" }}
