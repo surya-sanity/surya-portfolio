@@ -6,9 +6,7 @@ import Socials from "./Socials";
 
 const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
   return (
-    <div
-      className="flex justify-center items-center mx-auto px-10 py-14 max-w-7xl"
-    >
+    <div className="flex justify-center items-center mx-auto px-10 py-14 max-w-7xl">
       <div className="flex flex-col justify-center items-center gap-4">
         <div className="h-5 lg:h-5 xl:h-5 sm:h-2" />
 
@@ -17,7 +15,7 @@ const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.2 }}
           className="h-60 w-60 rounded-full bg-white"
-          src={require("../Assets/surya.jpeg")}
+          src="src/Assets/surya.jpeg"
         />
         <div className="h-2" />
         <motion.div

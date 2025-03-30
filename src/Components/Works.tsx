@@ -35,8 +35,6 @@ function Works(props: WorksProps) {
                 background: getBackground(index),
               }}
             >
-
-
               <div className="flex flex-row md:flex-col sm:flex-col justify-center items-center">
                 <div className="h-full w-full flex flex-1 justify-start items-start ">
                   <div className="flex flex-col">
@@ -57,44 +55,61 @@ function Works(props: WorksProps) {
                   </div>
                 </div>
                 {/* Preview Image */}
-                {item?.links?.imageLink && <div className="ml-10 md:my-5 md:ml-0 sm:my-3 sm:ml-0 ">
-                  <img
-                    src={require(`../Assets/mocks/${item?.links?.imageLink}`)}
-                    height={300}
-                    width={300}
-                    style={{ objectFit: "fill" }}
-                    alt={item.title}
-                  />
-                </div>}
+                {item?.links?.imageLink && (
+                  <div className="ml-10 md:my-5 md:ml-0 sm:my-3 sm:ml-0 ">
+                    <img
+                      src={`src/Assets/mocks/${item?.links?.imageLink}`}
+                      height={300}
+                      width={300}
+                      style={{ objectFit: "fill" }}
+                      alt={item.title}
+                    />
+                  </div>
+                )}
               </div>
 
               <div className="h-5" />
 
-
               {/* buttons */}
               <div className="flex flex-row flex-wrap items-center gap-5 ">
-                {
-                  item?.links?.clientSource && <a href={item.links.clientSource} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
+                {item?.links?.clientSource && (
+                  <a
+                    href={item.links.clientSource}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center"
+                  >
                     <Icons.github height={20} width={20} className="mr-3" />
                     <span className="text-ellipsis truncate">Client code</span>
-                  </a >
-                }
-                {
-                  item?.links?.serverSource && <a href={item.links.serverSource} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
+                  </a>
+                )}
+                {item?.links?.serverSource && (
+                  <a
+                    href={item.links.serverSource}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center"
+                  >
                     <Icons.github height={20} width={20} className="mr-3" />
                     <span className="text-ellipsis truncate">Server code</span>
-                  </a >
-                }
-                {
-                  item?.links?.source && <a href={item.links.source} target="_blank" rel="noopener noreferrer" className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center">
+                  </a>
+                )}
+                {item?.links?.source && (
+                  <a
+                    href={item.links.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center"
+                  >
                     <Icons.github height={20} width={20} className="mr-3" />
                     <span>Source</span>
-                  </a >
-                }
-                {
-                  item?.links?.visitSite &&
+                  </a>
+                )}
+                {item?.links?.visitSite && (
                   <motion.a
-                    href={item.links.visitSite} target="_blank" rel="noopener noreferrer"
+                    href={item.links.visitSite}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex flex-row items-center px-2.5 py-1 rounded-lg bg-blue cursor-pointer text-white font-semibold"
                     whileHover={{
                       scale: 1.05,
@@ -106,11 +121,12 @@ function Works(props: WorksProps) {
                   >
                     Visit
                   </motion.a>
-                }
-                {
-                  item?.links?.apkLink &&
+                )}
+                {item?.links?.apkLink && (
                   <motion.a
-                    href={item.links.apkLink} target="_blank" rel="noopener noreferrer"
+                    href={item.links.apkLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex flex-row items-center px-2.5 py-1 rounded-lg bg-blue cursor-pointer text-white font-semibold"
                     whileHover={{
                       scale: 1.05,
@@ -122,14 +138,13 @@ function Works(props: WorksProps) {
                   >
                     APK
                   </motion.a>
-                }
+                )}
               </div>
             </motion.div>
-
-          </div >
+          </div>
         );
       })}
-    </div >
+    </div>
   );
 }
 

@@ -1,18 +1,18 @@
-import { ReactComponent as Firebase } from "../icons/firebase-logo.svg";
-import { ReactComponent as Flutter } from "../icons/flutter-logo.svg";
-import { ReactComponent as ReactLogo } from "../icons/react-logo.svg";
-import { ReactComponent as Dart } from "../icons/dart.svg";
-import { ReactComponent as Figma } from "../icons/figma.svg";
-import { ReactComponent as Github } from "../icons/github.svg";
-import { ReactComponent as JavaScript } from "../icons/javascript.svg";
-import { ReactComponent as NodeJS } from "../icons/nodejs.svg";
-import { ReactComponent as Redis } from "../icons/redis.svg";
-import { ReactComponent as Redux } from "../icons/redux.svg";
-import { ReactComponent as Sequelize } from "../icons/sequelize.svg";
-import { ReactComponent as SocketIO } from "../icons/socketio.svg";
-import { ReactComponent as Tailwind } from "../icons/tailwind.svg";
-import { ReactComponent as TypeScript } from "../icons/typescript.svg";
-import { ReactComponent as NextJS } from "../icons/nextjs.svg";
+import Firebase from "../icons/firebase-logo.svg?react";
+import Flutter from "../icons/flutter-logo.svg?react";
+import ReactLogo from "../icons/react-logo.svg?react";
+import Dart from "../icons/dart.svg?react";
+import Figma from "../icons/figma.svg?react";
+import Github from "../icons/github.svg?react";
+import JavaScript from "../icons/javascript.svg?react";
+import NodeJS from "../icons/nodejs.svg?react";
+import Redis from "../icons/redis.svg?react";
+import Redux from "../icons/redux.svg?react";
+import Sequelize from "../icons/sequelize.svg?react";
+import SocketIO from "../icons/socketio.svg?react";
+import Tailwind from "../icons/tailwind.svg?react";
+import TypeScript from "../icons/typescript.svg?react";
+import NextJS from "../icons/nextjs.svg?react";
 
 export type IconsType = React.FunctionComponent<
   React.SVGProps<SVGSVGElement> & {
