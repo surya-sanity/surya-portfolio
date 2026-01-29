@@ -1,13 +1,15 @@
-import folioHive from "./Assets/mocks/folio-hive.png";
-import spacex from "./Assets/mocks/spacexmock.png";
-import flashchat from "./Assets/mocks/flashchatmock.png";
-import flash from "./Assets/mocks/flashmock.png";
-import weatherx from "./Assets/mocks/weatherxmock.png";
-import gpay from "./Assets/mocks/gpaymock.png";
-import instagram from "./Assets/mocks/instagrammock.png";
-import clubhouse from "./Assets/mocks/clubhousemock.png";
-import auth from "./Assets/mocks/authmock.png";
-import timex from "./Assets/mocks/timexmock.png";
+import folioHive from "./assets/mocks/folio-hive.png";
+import spacex from "./assets/mocks/spacexmock.png";
+import flashchat from "./assets/mocks/flashchatmock.png";
+import flash from "./assets/mocks/flashmock.png";
+import weatherx from "./assets/mocks/weatherxmock.png";
+import gpay from "./assets/mocks/gpaymock.png";
+import instagram from "./assets/mocks/instagrammock.png";
+import clubhouse from "./assets/mocks/clubhousemock.png";
+import auth from "./assets/mocks/authmock.png";
+import timex from "./assets/mocks/timexmock.png";
+
+import { StaticImageData } from "next/image";
 
 export const MyStackList = [
   "Flutter",
@@ -29,6 +31,7 @@ export const MyStackList = [
   "Redis",
   "Web Sockets",
   "NextJS",
+  "SEO",
 ];
 
 export enum Stack {
@@ -60,7 +63,7 @@ export interface WorkData {
     source?: string;
     visitSite?: string;
     apkLink?: string;
-    imageLink?: string;
+    imageLink?: string | StaticImageData;
   };
 }
 
