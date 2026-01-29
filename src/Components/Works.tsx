@@ -1,12 +1,15 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
-import { backgrounds } from "../Styles/Styles";
-import { workData } from "../appData";
-import TechStack from "./TechStack";
-import { Icons } from "../Assets/icons";
+import Image from "next/image";
+import { backgrounds } from "@/styles/Styles";
+import { workData } from "@/appData";
+import TechStack from "@/components/TechStack";
+import { Icons } from "@/assets/icons";
 
 interface WorksProps {
-  scrollRef: React.RefObject<HTMLDivElement>;
+  scrollRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export const getBackground = (index: number) => {
@@ -17,134 +20,108 @@ function Works(props: WorksProps) {
   const { scrollRef } = props;
 
   return (
-    <div
+    <section
       ref={scrollRef}
-      className="flex flex-col justify-center items-center bg-dark1 px-8 py-14"
+      className="flex flex-col justify-center items-center bg-dark1 px-6 py-20 gap-12"
     >
-      {workData.map((item, index) => {
-        return (
-          <div key={index} className="w-3/4 md:w-full sm:w-full my-3">
-            <motion.div
-              className="flex-1 flex flex-col  p-8 rounded-lg bg-white"
-              whileHover={{ scale: 1.03 }}
-              transition={{
-                duration: 0.2,
-              }}
-              key={index}
-              style={{
-                background: getBackground(index),
-              }}
-            >
-              <div className="flex flex-row md:flex-col sm:flex-col justify-center items-center">
-                <div className="h-full w-full flex flex-1 justify-start items-start ">
-                  <div className="flex flex-col">
-                    <div className="font-extrabold text-5xl sm:text-3xl text-white">
-                      {item.title}
-                    </div>
-                    <div className="h-5" />
-                    <div className="text-white font-semibold text-xl">
-                      {item.description}
-                    </div>
-                    <div className="h-5" />
+      <div className="text-center space-y-4 mb-8">
+        <h2 className="text-4xl md:text-3xl font-bold text-white tracking-tight">Featured Projects</h2>
+        <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
+      </div>
 
-                    {/* Tech Stack */}
-                    <div className="text-white">Tech Stack used</div>
-                    <div className="h-5" />
-                    <TechStack techStacks={item.techStack} />
-                    <div className="h-5" />
-                  </div>
+      <div className="grid grid-cols-1 gap-20 w-full max-w-7xl">
+        {workData.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="group relative overflow-hidden rounded-[40px] p-12 lg:p-20 transition-all font-montserrat shadow-2xl"
+            style={{
+              background: getBackground(index),
+            }}
+          >
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              <div className="flex-[1.5] space-y-10 text-left">
+                <div className="space-y-6">
+                  <h3 className="text-[64px] lg:text-[56px] md:text-[44px] sm:text-[36px] font-extrabold text-white leading-[1.1] tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-white font-normal text-[20px] leading-relaxed max-w-2xl opacity-90">
+                    {item.description}
+                  </p>
                 </div>
-                {/* Preview Image */}
-                {item?.links?.imageLink && (
-                  <div className="ml-10 md:my-5 md:ml-0 sm:my-3 sm:ml-0 ">
-                    <img
-                      src={item?.links?.imageLink}
-                      height={300}
-                      width={300}
-                      style={{ objectFit: "fill" }}
+
+                <div className="space-y-6">
+                  <span className="text-[18px] font-bold text-white/70 block">Tech Stack used</span>
+                  <TechStack techStacks={item.techStack} />
+                </div>
+
+                {/* Buttons: Client Code (Ghost) then Visit (Blue) */}
+                <div className="flex flex-wrap items-center gap-4 pt-6">
+                  {item?.links?.clientSource && (
+                    <a
+                      href={item.links.clientSource}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-lg transition-all border border-white/10"
+                    >
+                      <Icons.github className="mr-2 h-6 w-6" />
+                      Client code
+                    </a>
+                  )}
+                  {item?.links?.visitSite && (
+                    <motion.a
+                      href={item.links.visitSite}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="inline-flex items-center px-10 py-3 rounded-xl bg-[#0070f3] text-white font-bold text-lg transition-all shadow-xl"
+                    >
+                      Visit
+                    </motion.a>
+                  )}
+                </div>
+              </div>
+
+              {/* Vertical Image Stack (Right Side) */}
+              {item?.links?.imageLink && (
+                <div className="flex-1 flex flex-col gap-6 w-full lg:max-w-[450px]">
+                  <motion.div
+                    initial={{ x: 20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className="relative w-full aspect-[1.5/1] rounded-2xl overflow-hidden shadow-2xl border border-white/5"
+                  >
+                    <Image
+                      src={item.links.imageLink}
                       alt={item.title}
+                      fill
+                      className="object-cover"
                     />
-                  </div>
-                )}
-              </div>
-
-              <div className="h-5" />
-
-              {/* buttons */}
-              <div className="flex flex-row flex-wrap items-center gap-5 ">
-                {item?.links?.clientSource && (
-                  <a
-                    href={item.links.clientSource}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center"
+                  </motion.div>
+                  <motion.div
+                    initial={{ x: 20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 0.4 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="relative w-full aspect-[1.5/1] rounded-2xl overflow-hidden shadow-2xl border border-white/5 grayscale-[30%]"
                   >
-                    <Icons.github height={20} width={20} className="mr-3" />
-                    <span className="text-ellipsis truncate">Client code</span>
-                  </a>
-                )}
-                {item?.links?.serverSource && (
-                  <a
-                    href={item.links.serverSource}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center"
-                  >
-                    <Icons.github height={20} width={20} className="mr-3" />
-                    <span className="text-ellipsis truncate">Server code</span>
-                  </a>
-                )}
-                {item?.links?.source && (
-                  <a
-                    href={item.links.source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-2 py-1 rounded-lg shadow-sm text-white bg-gray-200 bg-opacity-20 flex justify-center items-center"
-                  >
-                    <Icons.github height={20} width={20} className="mr-3" />
-                    <span>Source</span>
-                  </a>
-                )}
-                {item?.links?.visitSite && (
-                  <motion.a
-                    href={item.links.visitSite}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-row items-center px-2.5 py-1 rounded-lg bg-blue cursor-pointer text-white font-semibold"
-                    whileHover={{
-                      scale: 1.05,
-                      transition: { duration: 0.2 },
-                    }}
-                    whileTap={{
-                      scale: 0.9,
-                    }}
-                  >
-                    Visit
-                  </motion.a>
-                )}
-                {item?.links?.apkLink && (
-                  <motion.a
-                    href={item.links.apkLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-row items-center px-2.5 py-1 rounded-lg bg-blue cursor-pointer text-white font-semibold"
-                    whileHover={{
-                      scale: 1.05,
-                      transition: { duration: 0.2 },
-                    }}
-                    whileTap={{
-                      scale: 0.9,
-                    }}
-                  >
-                    APK
-                  </motion.a>
-                )}
-              </div>
-            </motion.div>
-          </div>
-        );
-      })}
-    </div>
+                    <Image
+                      src={item.links.imageLink}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.div>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
   );
 }
 

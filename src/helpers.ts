@@ -1,5 +1,5 @@
-import { Icons, IconsType } from "./Assets/icons";
-import { Stack } from "./appData";
+import { Icons, IconsType } from "@/assets/icons";
+import { Stack } from "@/appData";
 
 export const techStackIconData: Record<Stack, IconsType> = {
   [Stack.React]: Icons.react,

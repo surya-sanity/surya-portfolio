@@ -1,79 +1,123 @@
+"use client";
+
 import { motion } from "framer-motion";
-import CTA from "../Components/CTA";
-import { getBackground } from "../Components/Works";
-import { MyStackList } from "../appData";
+import Image from "next/image";
+import CTA from "@/components/CTA";
+import { getBackground } from "@/components/Works";
+import { MyStackList } from "@/appData";
 import Socials from "./Socials";
-import surya from "../Assets/surya.jpeg";
+import { getTechStyle } from "@/utils/colors";
+import surya from "@/assets/surya.jpeg";
 
-const ProfileContent = ({ triggerScroll }: { triggerScroll: Function }) => {
+const ProfileContent = ({ triggerScroll, hideCTA = false }: { triggerScroll: () => void; hideCTA?: boolean }) => {
   return (
-    <div className="flex justify-center items-center mx-auto px-10 py-14 max-w-7xl">
-      <div className="flex flex-col justify-center items-center gap-4">
-        <div className="h-5 lg:h-5 xl:h-5 sm:h-2" />
+    <section className="flex flex-col justify-center items-center h-screen mx-auto px-6 max-w-7xl overflow-hidden font-montserrat">
+      <div className="flex flex-col justify-center items-center w-full text-center">
 
-        <motion.img
-          animate={{ opacity: [0, 0.2, 0.3, 0.5, 1] }}
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.2 }}
-          className="h-60 w-60 rounded-full bg-white"
-          src={surya}
-        />
-        <div className="h-2" />
         <motion.div
-          animate={{ opacity: [0, 1], translateX: [200, 0] }}
-          transition={{ duration: 0.2 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="relative h-[clamp(150px,25vw,240px)] w-[clamp(150px,25vw,240px)] rounded-full overflow-hidden shadow-2xl mb-8"
         >
-          <div className="py-2 text-start text-8xl md:text-3xl sm:text-2xl font-extrabold text-white">
+          <Image
+            src={surya}
+            alt="Surya Sanity"
+            fill
+            priority
+            className="object-cover"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <h1 className="text-[clamp(2rem,10vw,6rem)] font-extrabold text-white tracking-tight leading-[0.9] mb-4">
             Hey, I am
             <span>&nbsp;</span>
-            <span className="text-start text-8xl md:text-3xl sm:text-2xl font-extrabold purplePinkGradient">
+            <span className="purplePinkGradient">
               Surya
             </span>
-          </div>
+          </h1>
         </motion.div>
-        <div className="h-1" />
-        <Socials />
-        <div className="h-1" />
+
         <motion.div
-          animate={{ opacity: [0, 1], translateX: [-200, 0] }}
-          transition={{ duration: 0.2 }}
-          className="py-2 text-start text-xl text-white font-normal mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="text-[clamp(1rem,2.5vw,1.25rem)] text-white font-normal mb-6 tracking-wide"
         >
           Front-end Developer
         </motion.div>
 
+        <Socials />
+
         <motion.div
-          animate={{ opacity: [0, 0.2, 0.3, 0.5, 1] }}
-          transition={{ duration: 0.2, delay: 0.1 }}
-          className="flex flex-row gap-4 flex-wrap justify-center items-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-row gap-3 flex-wrap justify-center items-center max-w-3xl px-4 mt-10"
         >
-          {MyStackList.map((item, index) => (
-            <div
-              key={index.toString()}
-              className="rounded-full px-2 py-1 justify-center items-center flex text-white font-semibold hover:scale-125  transition-all ease-in-out cursor-default"
-              style={{
-                background: getBackground(item.length),
-              }}
-            >
-              {item}
-            </div>
-          ))}
+          {MyStackList.map((item, index) => {
+            const style = getTechStyle(item);
+            return (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.25 }}
+                className="rounded-lg px-4 py-2 flex text-[14px] font-semibold transition-all cursor-default backdrop-blur-sm border border-white/10"
+                style={{
+                  backgroundColor: style.bg,
+                  color: style.text,
+                }}
+              >
+                {item}
+              </motion.div>
+            );
+          })}
         </motion.div>
 
-        <div className="md:h-3 sm:h-2 h-5" />
-        <motion.div
-          animate={{ opacity: [0, 1], translateX: [100, 0] }}
-          transition={{ duration: 0.1, delay: 0.2 }}
-        >
-          <CTA
-            text="View my work 👇"
-            onPress={() => {
-              triggerScroll();
-            }}
-          />
-        </motion.div>
+        {!hideCTA && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
+            className="mt-12"
+          >
+            <CTA
+              text="View my work 👇"
+              onPress={() => triggerScroll()}
+              className="rounded-lg px-10"
+            />
+          </motion.div>
+        )}
       </div>
-    </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        whileHover={{ opacity: 0.8 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-8 text-[10px] font-mono tracking-[0.15em] uppercase text-white/40 flex items-center gap-2 transition-opacity"
+      >
+        <span className="relative flex h-1.5 w-1.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+        </span>
+        <span>
+          Running on my 8 years old{" "}
+          <a
+            href="https://pocof1-observability.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-bold hover:underline decoration-blue/50 underline-offset-4 transition-all"
+          >
+            POCO F1
+          </a>
+        </span>
+      </motion.div>
+    </section>
   );
 };
 

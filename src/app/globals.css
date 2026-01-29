@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark1: black;
+  --color-blue: #0070f3;
+  --color-pink: #e000e1;
+  --color-purple: #ac00ff;
+
+  --spacing-10: 10%;
+  --spacing-20: 20%;
+  --spacing-40: 40%;
+
+  /* Screens / Breakpoints */
+  --breakpoint-sm: 639px;
+  --breakpoint-md: 820px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1279px;
+  --breakpoint-2xl: 1535px;
+
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    background-color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .blueGlow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 50%,
+        rgba(0, 174, 255, 0.08) 0%,
+        rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .purplePinkGradient {
+    background: linear-gradient(to bottom right, #8020f7 0%, #e70af4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
