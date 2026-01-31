@@ -99,7 +99,7 @@ const ProfileContent = ({ triggerScroll, hideCTA = false }: { triggerScroll: () 
         animate={{ opacity: 0.4 }}
         whileHover={{ opacity: 0.8 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 text-[10px] font-mono tracking-[0.15em] uppercase text-white/40 flex items-center gap-2 transition-opacity"
+        className="absolute bottom-8 text-[10px] font-mono tracking-[0.15em] uppercase text-white/80 flex items-center gap-2 transition-opacity"
       >
         <span className="relative flex h-1.5 w-1.5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
